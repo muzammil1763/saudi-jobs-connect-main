@@ -1,0 +1,137 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-display: 'Poppins', system-ui, sans-serif;
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-saudi-green: var(--saudi-green);
+  --color-saudi-green-light: var(--saudi-green-light);
+  --color-saudi-green-dark: var(--saudi-green-dark);
+  --color-cream: var(--cream);
+  --color-gold: var(--gold);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  --radius: 0.625rem;
+
+  /* Logo-inspired palette: Black · Gold · Dark Green */
+  --saudi-green: oklch(0.55 0.13 152);          /* readable green on dark bg */
+  --saudi-green-light: oklch(0.65 0.14 152);    /* lighter green */
+  --saudi-green-dark: oklch(0.22 0.07 152);     /* deep forest green — backgrounds only */
+  --cream: oklch(0.12 0.01 60);                 /* near-black warm tint for secondary surfaces */
+  --gold: oklch(0.75 0.15 75);                  /* rich gold — logo accent color */
+
+  /* Site base: deep black background, gold+green accents */
+  --background: oklch(0.09 0.01 60);            /* #0d0d0b  rich black */
+  --foreground: oklch(0.93 0.02 80);            /* warm off-white */
+  --card: oklch(0.13 0.015 60);                 /* dark card surface */
+  --card-foreground: oklch(0.93 0.02 80);
+  --popover: oklch(0.13 0.015 60);
+  --popover-foreground: oklch(0.93 0.02 80);
+
+  --primary: var(--gold);
+  --primary-foreground: oklch(0.09 0.01 60);    /* black text on gold */
+  --secondary: oklch(0.16 0.02 152);            /* dark green surface */
+  --secondary-foreground: oklch(0.93 0.02 80);
+  --muted: oklch(0.16 0.01 60);                 /* subtle dark surface */
+  --muted-foreground: oklch(0.60 0.03 80);      /* dimmed text */
+  --accent: oklch(0.18 0.04 152);               /* dark green tint for hover/active */
+  --accent-foreground: var(--gold);
+  --destructive: oklch(0.6 0.22 25);
+  --destructive-foreground: oklch(1 0 0);
+  --border: oklch(0.75 0.15 75 / 18%);          /* gold-tinted border */
+  --input: oklch(0.20 0.02 60);
+  --ring: var(--gold);
+
+  --sidebar: oklch(0.11 0.01 60);
+  --sidebar-foreground: oklch(0.93 0.02 80);
+  --sidebar-primary: var(--gold);
+  --sidebar-primary-foreground: oklch(0.09 0.01 60);
+  --sidebar-accent: oklch(0.18 0.04 152);
+  --sidebar-accent-foreground: var(--gold);
+  --sidebar-border: oklch(0.75 0.15 75 / 15%);
+  --sidebar-ring: var(--gold);
+
+  /* Hero: black to dark green gradient like the logo's lower half */
+  --gradient-hero: linear-gradient(135deg, oklch(0.06 0.01 60) 0%, var(--saudi-green-dark) 50%, var(--saudi-green) 100%);
+  --gradient-soft: linear-gradient(180deg, var(--background) 0%, oklch(0.12 0.02 152) 100%);
+  --shadow-elegant: 0 10px 30px -10px color-mix(in oklab, var(--gold) 30%, transparent);
+  --shadow-card: 0 4px 16px -4px color-mix(in oklab, oklch(0 0 0) 50%, transparent);
+}
+
+.dark {
+  --background: oklch(0.07 0.01 60);
+  --foreground: oklch(0.95 0.01 80);
+  --card: oklch(0.11 0.01 60);
+  --card-foreground: oklch(0.95 0.01 80);
+  --popover: oklch(0.11 0.01 60);
+  --popover-foreground: oklch(0.95 0.01 80);
+  --primary: var(--gold);
+  --primary-foreground: oklch(0.07 0.01 60);
+  --secondary: oklch(0.16 0.02 152);
+  --secondary-foreground: oklch(0.95 0.01 80);
+  --muted: oklch(0.16 0.01 60);
+  --muted-foreground: oklch(0.60 0.03 80);
+  --accent: oklch(0.18 0.04 152);
+  --accent-foreground: var(--gold);
+  --border: oklch(0.75 0.15 75 / 18%);
+  --input: oklch(0.20 0.02 60);
+  --ring: var(--gold);
+}
+
+@layer base {
+  * { border-color: var(--color-border); }
+  html { scroll-behavior: smooth; }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer utilities {
+  .bg-hero-gradient { background: var(--gradient-hero); }
+  .bg-soft-gradient { background: var(--gradient-soft); }
+  .shadow-elegant { box-shadow: var(--shadow-elegant); }
+  .shadow-card { box-shadow: var(--shadow-card); }
+  .text-balance { text-wrap: balance; }
+}
