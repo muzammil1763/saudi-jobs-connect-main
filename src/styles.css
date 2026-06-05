@@ -49,48 +49,48 @@
   --radius: 0.625rem;
 
   /* Logo-inspired palette: Black · Gold · Dark Green */
-  --saudi-green: oklch(0.55 0.13 152);          /* readable green on dark bg */
-  --saudi-green-light: oklch(0.65 0.14 152);    /* lighter green */
-  --saudi-green-dark: oklch(0.22 0.07 152);     /* deep forest green — backgrounds only */
-  --cream: oklch(0.12 0.01 60);                 /* near-black warm tint for secondary surfaces */
+  --saudi-green: oklch(0.42 0.12 152);          /* #165B33 */
+  --saudi-green-light: oklch(0.55 0.13 152);    /* #2E8B57 */
+  --saudi-green-dark: oklch(0.22 0.07 152);     /* deep forest green */
+  --cream: oklch(0.97 0.02 95);                 /* warm white */
   --gold: oklch(0.75 0.15 75);                  /* rich gold — logo accent color */
 
-  /* Site base: deep black background, gold+green accents */
-  --background: oklch(0.09 0.01 60);            /* #0d0d0b  rich black */
-  --foreground: oklch(0.93 0.02 80);            /* warm off-white */
-  --card: oklch(0.13 0.015 60);                 /* dark card surface */
-  --card-foreground: oklch(0.93 0.02 80);
-  --popover: oklch(0.13 0.015 60);
-  --popover-foreground: oklch(0.93 0.02 80);
+  /* Site base: white background, gold+green accents */
+  --background: oklch(1 0 0);                   /* pure white */
+  --foreground: oklch(0.15 0.02 240);           /* near-black text */
+  --card: oklch(1 0 0);                         /* white card */
+  --card-foreground: oklch(0.15 0.02 240);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.15 0.02 240);
 
   --primary: var(--gold);
-  --primary-foreground: oklch(0.09 0.01 60);    /* black text on gold */
-  --secondary: oklch(0.16 0.02 152);            /* dark green surface */
-  --secondary-foreground: oklch(0.93 0.02 80);
-  --muted: oklch(0.16 0.01 60);                 /* subtle dark surface */
-  --muted-foreground: oklch(0.60 0.03 80);      /* dimmed text */
-  --accent: oklch(0.18 0.04 152);               /* dark green tint for hover/active */
-  --accent-foreground: var(--gold);
+  --primary-foreground: oklch(0.09 0.01 60);
+  --secondary: oklch(0.97 0.01 80);
+  --secondary-foreground: var(--saudi-green-dark);
+  --muted: oklch(0.96 0.005 240);
+  --muted-foreground: oklch(0.45 0.02 240);
+  --accent: oklch(0.93 0.04 152);               /* light green tint */
+  --accent-foreground: var(--saudi-green-dark);
   --destructive: oklch(0.6 0.22 25);
   --destructive-foreground: oklch(1 0 0);
-  --border: oklch(0.75 0.15 75 / 18%);          /* gold-tinted border */
-  --input: oklch(0.20 0.02 60);
+  --border: oklch(0.88 0.01 240);
+  --input: oklch(0.92 0.01 240);
   --ring: var(--gold);
 
-  --sidebar: oklch(0.11 0.01 60);
-  --sidebar-foreground: oklch(0.93 0.02 80);
-  --sidebar-primary: var(--gold);
-  --sidebar-primary-foreground: oklch(0.09 0.01 60);
-  --sidebar-accent: oklch(0.18 0.04 152);
-  --sidebar-accent-foreground: var(--gold);
-  --sidebar-border: oklch(0.75 0.15 75 / 15%);
+  --sidebar: oklch(0.98 0.005 152);
+  --sidebar-foreground: var(--saudi-green-dark);
+  --sidebar-primary: var(--saudi-green);
+  --sidebar-primary-foreground: oklch(1 0 0);
+  --sidebar-accent: oklch(0.93 0.04 152);
+  --sidebar-accent-foreground: var(--saudi-green-dark);
+  --sidebar-border: oklch(0.9 0.02 152);
   --sidebar-ring: var(--gold);
 
   /* Hero: black to dark green gradient like the logo's lower half */
   --gradient-hero: linear-gradient(135deg, oklch(0.06 0.01 60) 0%, var(--saudi-green-dark) 50%, var(--saudi-green) 100%);
-  --gradient-soft: linear-gradient(180deg, var(--background) 0%, oklch(0.12 0.02 152) 100%);
-  --shadow-elegant: 0 10px 30px -10px color-mix(in oklab, var(--gold) 30%, transparent);
-  --shadow-card: 0 4px 16px -4px color-mix(in oklab, oklch(0 0 0) 50%, transparent);
+  --gradient-soft: linear-gradient(180deg, oklch(1 0 0) 0%, var(--cream) 100%);
+  --shadow-elegant: 0 10px 30px -10px color-mix(in oklab, var(--saudi-green) 30%, transparent);
+  --shadow-card: 0 4px 16px -4px color-mix(in oklab, var(--saudi-green-dark) 15%, transparent);
 }
 
 .dark {

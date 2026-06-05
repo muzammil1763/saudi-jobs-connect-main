@@ -21,7 +21,7 @@ export function JobCard({ job, index = 0 }: { job: JobOpening; index?: number })
           <h3 className="font-display text-lg font-bold text-foreground">{job.title}</h3>
           <p className="text-xs text-muted-foreground">{cat?.short}</p>
         </div>
-        <span className={`shrink-0 rounded-full px-3 py-1 text-[10px] font-semibold uppercase tracking-wider ${isVisa ? "bg-gold/20 text-amber-700" : "bg-accent text-accent-foreground"}`}>
+        <span className={`shrink-0 rounded-full px-3 py-1 text-[10px] font-semibold uppercase tracking-wider ${isVisa ? "bg-gold/20 text-amber-700" : "bg-accent text-saudi-green-dark"}`}>
           {isVisa ? "Visa Service" : cat?.name}
         </span>
       </div>

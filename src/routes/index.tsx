@@ -273,7 +273,7 @@ function Index() {
                   )}
                 </div>
               </div>
-              <span className="mt-1 inline-block rounded-full bg-accent px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-accent-foreground">
+              <span className="mt-1 inline-block rounded-full bg-accent px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-saudi-green-dark">
                 {company.industry}
               </span>
               <p className="mt-2 text-sm text-muted-foreground">{company.description}</p>
