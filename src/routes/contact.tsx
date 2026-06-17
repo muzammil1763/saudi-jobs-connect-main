@@ -14,8 +14,8 @@ export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
       { title: "Contact – Saudi Embassy Islamabad Jobs Portal" },
-      { name: "description", content: "Contact the Saudi Embassy Karachi for job inquiries, visa, document attestation and worker support." },
-      { property: "og:title", content: "Contact Saudi Embassy Karachi" },
+      { name: "description", content: "Contact the Saudi Embassy Islamabad for job inquiries, visa, document attestation and worker support." },
+      { property: "og:title", content: "Contact Saudi Embassy Islamabad" },
       { property: "og:description", content: "Reach out for job inquiries, visa and worker support." },
     ],
   }),
